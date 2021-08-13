@@ -10,6 +10,10 @@ export class User extends Model {
             primaryKey: true,
             required: true,
         },
+        email: {
+            type: DataTypes.STRING,
+            required: true,
+        },
         username: {
             type: DataTypes.STRING,
             length: 25,

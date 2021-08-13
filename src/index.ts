@@ -11,7 +11,7 @@ config({ export: true });
 // Start oak server
 const app = new Application<{
     user: Omit<IUser, "password"> | null;
-}>();
+}>({ logErrors: true });
 
 // Import logger middleware
 app.use(logger.logger);

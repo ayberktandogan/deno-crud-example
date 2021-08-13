@@ -1,4 +1,5 @@
 import { Router } from "../../../deps.ts";
+import { createUser } from "../../handlers/dao/user.dao.ts";
 
 const router = new Router();
 
@@ -7,7 +8,6 @@ router.get("/me", (ctx) => {
         msg: "TODO",
     };
     ctx.response.status = 501;
-    return ctx;
 });
 
 router.put("/me", (ctx) => {
@@ -15,7 +15,6 @@ router.put("/me", (ctx) => {
         msg: "TODO",
     };
     ctx.response.status = 501;
-    return ctx;
 });
 
 router.post("/login", (ctx) => {
@@ -23,15 +22,15 @@ router.post("/login", (ctx) => {
         msg: "TODO",
     };
     ctx.response.status = 501;
-    return ctx;
 });
 
-router.post("/register", (ctx) => {
+router.post("/register", async (ctx) => {
+    const body = await ctx.request.body().value;
+
     ctx.response.body = {
         msg: "TODO",
     };
     ctx.response.status = 501;
-    return ctx;
 });
 
 export { router };
