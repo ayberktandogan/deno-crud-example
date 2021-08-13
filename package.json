@@ -1,0 +1,7 @@
+{
+    "scripts": {
+        "server": "deno run --allow-net --allow-env --allow-read ./src/index.ts",
+        "hot-reload": "denon run --allow-net --allow-env --allow-read ./src/index.ts",
+        "clean-cache": "deno cache --reload ./src/index.ts"
+    }
+}
